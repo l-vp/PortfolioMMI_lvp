@@ -45,7 +45,7 @@ a   { color: inherit; text-decoration: none; }
   z-index: 200;
   height: var(--nav-h);
   background: transparent;
-  transition: background .3s, border-color .3s;
+  transition: .3s, border-color .3s;
   border-bottom: 1px solid transparent;
 }
 #header.scrolled {
@@ -55,9 +55,12 @@ a   { color: inherit; text-decoration: none; }
 }
 
 .nav-inner {
+  width: 100%;
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 4vw; /* 4% viewport → parfait sur tous écrans */
+  padding-left: max(1.5rem, 4vw);
+  padding-right: max(1.5rem, 4vw);
   height: 100%;
   display: flex;
   align-items: center;
@@ -110,6 +113,11 @@ a   { color: inherit; text-decoration: none; }
 }
 .burger.open span:first-child { transform: translateY(6.5px) rotate(45deg); }
 .burger.open span:last-child  { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 640px) {
+  .nav-links { position:fixed; /* mobile menu */ }
+  .burger { display:flex; }
+}
 
 /* ─────────────────────────────────────────────────────────
    SECTIONS — base
@@ -271,35 +279,135 @@ a   { color: inherit; text-decoration: none; }
 /* ─────────────────────────────────────────────────────────
    COMPÉTENCES
 ───────────────────────────────────────────────────────── */
-.skills-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem 4rem;
+.skills-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 0 2.5rem;
 }
+
+.skills-category {
+  border-bottom: 1px solid var(--beige-dark);
+  padding-bottom: 0.8rem;
+}
+
+.skills-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0;
+}
+
 .skills-cat-title {
-  font-size: 0.66rem;
+  font-size: 0.78rem;
   letter-spacing: .16em;
   text-transform: uppercase;
   color: var(--ink-muted);
-  margin-bottom: 1.2rem;
-  padding-bottom: .5rem;
-  border-bottom: 1px solid var(--beige-dark);
+  margin: 0;
 }
-.skills-logos   { display: flex; flex-wrap: wrap; gap: .9rem; }
-.skill-chip     { display: flex; flex-direction: column; align-items: center; gap: .4rem; }
-.skill-chip span { font-size: 0.68rem; color: var(--ink-soft); letter-spacing: .03em; }
-.skill-logo-placeholder {
-  width: 50px; height: 50px;
-  background: var(--beige-mid);
-  border: 1.5px dashed var(--beige-dark);
-  border-radius: 9px;
-  transition: border-color .2s, background .2s;
+
+.skills-arrow {
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  transition: transform 0.3s ease;
 }
-.skill-chip:hover .skill-logo-placeholder {
-  border-color: var(--teal);
-  background: rgba(122,173,162,.1);
+
+.skills-category.active .skills-arrow {
+  transform: rotate(45deg);
 }
+
+.skills-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease, padding-top 0.3s ease;
+  padding-top: 0;
+}
+
+.skills-category.active .skills-content {
+  max-height: 500px;
+  padding-top: 1rem;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-info {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: 180px;
+}
+
+.skill-info img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.skill-info span {
+  font-size: 0.9rem;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.skill-level {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.skill-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: var(--ink);
+  border-radius: 999px;
+  transition: width 0.6s ease;
+}
+
+.skill-percent {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  min-width: 40px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .skills-accordion {
+    padding: 0 1.2rem;
+  }
+
+  .skill-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-info {
+    min-width: auto;
+  }
+
+  .skill-level {
+    width: 100%;
+  }
+}
+
 
 /* ─────────────────────────────────────────────────────────
    PRODUCTIONS — CAROUSEL
@@ -316,17 +424,31 @@ a   { color: inherit; text-decoration: none; }
 }
 
 .carousel-viewport {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-viewport::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel-track {
   display: flex;
   gap: 1.6rem;
-  /* AJOUT → padding gauche pour centrage */
-  padding: 2rem 50% 2.5rem; /* 50% = moitié viewport */
-  padding-left: calc(50% + 140px); /* 140px = moitié carte */
+  padding: 2rem 50% 2.5rem;
+  padding-left: calc(50% + 140px);
+  width: max-content;
 }
+
+.cat-card {
+  scroll-snap-align: center;
+}
+
 .carousel-track .cat-card:first-child {
   margin-left: -140px; /* Moitié largeur carte */
 }
