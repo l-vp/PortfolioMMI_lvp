@@ -27,6 +27,17 @@ if (sections.length) {
   sections.forEach(s => secObs.observe(s));
 }
 
+  const skillCategories = document.querySelectorAll('.skills-category');
+
+  skillCategories.forEach(category => {
+    const button = category.querySelector('.skills-toggle');
+
+    button.addEventListener('click', () => {
+      category.classList.toggle('active');
+    });
+  });
+
+
 /* ── Burger ───────────────────────────────────────────── */
 const burger  = document.getElementById('burger');
 const navMenu = document.getElementById('nav-links');
@@ -82,7 +93,6 @@ if (revealEls.length) {
     const cardW    = card.offsetWidth;
     const cardLeft = card.offsetLeft;
     const offset   = cardLeft - (vpW / 2) + (cardW / 2);
-    // Ne jamais aller en négatif (carte 0 resterait hors écran)
     return Math.max(0, offset);
   }
 
@@ -90,10 +100,10 @@ if (revealEls.length) {
     cards.forEach((c, i) => {
       c.classList.remove('is-active', 'is-prev', 'is-next', 'is-far');
       const diff = i - active;
-      if (diff === 0)        c.classList.add('is-active');
-      else if (diff === -1)  c.classList.add('is-prev');
-      else if (diff === 1)   c.classList.add('is-next');
-      else                   c.classList.add('is-far');
+      if (diff === 0) c.classList.add('is-active');
+      else if (diff === -1) c.classList.add('is-prev');
+      else if (diff === 1) c.classList.add('is-next');
+      else c.classList.add('is-far');
     });
   }
 
@@ -106,7 +116,6 @@ if (revealEls.length) {
 
   function go(idx) {
     active = Math.max(0, Math.min(total - 1, idx));
-    // Wait one tick so CSS classes apply before reading sizes
     requestAnimationFrame(() => {
       track.style.transform = `translateX(-${getOffset(active)}px)`;
     });
@@ -116,60 +125,17 @@ if (revealEls.length) {
     if (btnNext) btnNext.disabled = active === total - 1;
   }
 
-  // Init
   go(0);
 
-  // Arrows
   if (btnPrev) btnPrev.addEventListener('click', () => go(active - 1));
   if (btnNext) btnNext.addEventListener('click', () => go(active + 1));
 
-  // Dots
   if (dotsWrap) {
     dotsWrap.querySelectorAll('.dot').forEach(d => {
       d.addEventListener('click', () => go(+d.dataset.dot));
     });
   }
 
-  let startX = 0, isDragging = false, didDrag = false;
-
-  viewport.addEventListener('pointerdown', e => {
-    startX = e.clientX;
-    isDragging = true;
-    didDrag = false;
-    track.style.transition = 'none';
-    viewport.setPointerCapture(e.pointerId);
-  });
-  viewport.addEventListener('pointermove', e => {
-    if (!isDragging) return;
-    const dx = e.clientX - startX;
-    if (Math.abs(dx) > 8) didDrag = true;
-    if (didDrag) track.style.transform = `translateX(${-getOffset(active) + dx}px)`;
-  });
-  viewport.addEventListener('pointerup', e => {
-    if (!isDragging) return;
-    isDragging = false;
-    track.style.transition = 'transform .55s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-    const dx = e.clientX - startX;
-    if (didDrag && Math.abs(dx) > 50) {
-      go(dx < 0 ? active + 1 : active - 1);
-    } else {
-      go(active);
-    }
-    didDrag = false;
-  });
-
-  // Click sur une carte : centrer si pas active, naviguer si déjà active
-  cards.forEach((card, i) => {
-    card.addEventListener('click', e => {
-      if (didDrag) { e.preventDefault(); return; }
-      if (i !== active) {
-        e.preventDefault();
-        go(i);
-      }
-    });
-  });
-
-  // Recalc on resize
   window.addEventListener('resize', () => go(active), { passive: true });
 })();
 
