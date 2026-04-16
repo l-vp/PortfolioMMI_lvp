@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — MMI</title>
+  <meta name="description" content="Portfolio de Ludovic Valden-Petrignani, étudiant en BUT MMI, autour du cinéma, du design et de la création numérique.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+  <header id="header">
+    <nav class="nav-inner" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo">PORTFOLIO</a>
+
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-controls="nav-links"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="#apropos" class="nav-link">À propos</a></li>
+        <li><a href="#competences" class="nav-link">Compétences</a></li>
+        <li><a href="#productions" class="nav-link">Productions</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section id="accueil" class="section hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title" class="hero-title">Ludovic Valden-Petrignani</h1>
+
+        <div class="hero-visual">
+          <img
+            src="me.webp"
+            alt="Portrait de Ludovic Valden-Petrignani"
+            class="hero-image"
+            width="900"
+            height="1200"
+            fetchpriority="high">
+        </div>
+
+        <p class="hero-sub">Étudiant MMI · Cinéma &amp; Création numérique</p>
+
+        <a href="#productions" class="cta-btn">Voir mes travaux</a>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section id="apropos" class="section" aria-labelledby="apropos-title">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title" id="apropos-title">À propos</h2>
+      </div>
+
+      <div class="apropos-grid">
+        <div class="apropos-photo-wrap">
+          <div class="photo-frame">
+            <div class="photo-placeholder">
+              <img
+                src="me.webp"
+                alt="Portrait de Ludovic Valden-Petrignani"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async">
+            </div>
+          </div>
+        </div>
+
+        <div class="apropos-cards">
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">☀</span>
+            <h3>Qui suis-je ?</h3>
+            <p>Actuellement en BUT MMI, je suis passionné par la création et l'audiovisuel, domaines vers lesquels je souhaite orienter ma carrière.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">🎬</span>
+            <h3>Mon rapport au cinéma</h3>
+            <p>Le cinéma et l'écriture ont toujours joué un rôle central dans ma vie, et aujourd'hui je compte ajouter ma pierre à l'édifice. Pour moi, le cinéma et l'art en général sont des vecteurs d'idées, et je pense avoir des choses à dire et à apporter.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">✦</span>
+            <h3>Parcours</h3>
+            <p>Après un bac général, je me suis cherché pendant deux ans avant de réellement trouver ma voie. Ces années m'ont énormément appris et ont contribué à ma construction personnelle et professionnelle.</p>
+          </article>
+
+          <article class="card reveal">
+            <span class="card-icon" aria-hidden="true">◎</span>
+            <h3>Autre</h3>
+            <p>En dehors de mes passions pour le cinéma et l'écriture, j'aime la musique, le sport et les jeux vidéo entre autres.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="section section--alt" aria-labelledby="competences-title">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title" id="competences-title">Compétences</h2>
+      </div>
+
+      <div class="skills-accordion">
+
+        <div class="skills-category reveal">
+          <button class="skills-toggle" type="button">
+            <span class="skills-cat-title">Vidéo &amp; Cinéma</span>
+            <span class="skills-arrow" aria-hidden="true">+</span>
+          </button>
+
+          <div class="skills-content">
+            <div class="skill-row">
+              <div class="skill-info">
+                <img src="logopremiere.webp" alt="Logo Premiere Pro" width="68" height="68" loading="lazy" decoding="async">
+                <span>Premiere Pro</span>
+              </div>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" style="width: 40%;"></div></div>
+                <span class="skill-percent">40%</span>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info">
+                <img src="logoae.webp" alt="Logo After Effects" width="68" height="68" loading="lazy" decoding="async">
+                <span>After Effects</span>
+              </div>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" style="width: 0%;"></div></div>
+                <span class="skill-percent">0%</span>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info">
+                <img src="logodv.webp" alt="Logo DaVinci Resolve" width="68" height="68" loading="lazy" decoding="async">
+                <span>DaVinci Resolve</span>
+              </div>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" style="width: 40%;"></div></div>
+                <span class="skill-percent">40%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal">
+          <button class="skills-toggle" type="button">
+            <span class="skills-cat-title">Design &amp; Graphisme</span>
+            <span class="skills-arrow" aria-hidden="true">+</span>
+          </button>
+
+          <div class="skills-content">
+            <div class="skill-row">
+              <div class="skill-info">
+                <img src="logops.webp" alt="Logo Photoshop" width="68" height="68" loading="lazy" decoding="async">
+                <span>Photoshop</span>
+              </div>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" style="width: 60%;"></div></div>
+                <span class="skill-percent">60%</span>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info">
+                <img src="logoai.webp" alt="Logo Illustrator" width="68" height="68" loading="lazy" decoding="async">
+                <span>Illustrator</span>
+              </div>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" style="width: 50%;"></div></div>
+                <span class="skill-percent">50%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal">
+          <button class="skills-toggle" type="button">
+            <span class="skills-cat-title">Web &amp; Code</span>
+            <span class="skills-arrow" aria-hidden="true">+</span>
+          </button>
+
+          <div class="skills-content">
+            <div class="skill-row">
+              <div class="skill-info">
+                <img src="logohtml.webp" alt="Logo HTML" width="68" height="68" loading="lazy" decoding="async">
+                <span>HTML</span>
+              </div>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" style="width: 50%;"></div></div>
+                <span class="skill-percent">50%</span>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info">
+                <img src="logocss.webp" alt="Logo CSS" width="68" height="68" loading="lazy" decoding="async">
+                <span>CSS</span>
+              </div>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" style="width: 50%;"></div></div>
+                <span class="skill-percent">50%</span>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info">
+                <img src="logojs.webp" alt="Logo JavaScript" width="68" height="68" loading="lazy" decoding="async">
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" style="width: 15%;"></div></div>
+                <span class="skill-percent">15%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal">
+          <button class="skills-toggle" type="button">
+            <span class="skills-cat-title">3D &amp; Autre</span>
+            <span class="skills-arrow" aria-hidden="true">+</span>
+          </button>
+
+          <div class="skills-content">
+            <div class="skill-row">
+              <div class="skill-info">
+                <img src="logoblend.webp" alt="Logo Blender" width="68" height="68" loading="lazy" decoding="async">
+                <span>Blender</span>
+              </div>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" style="width: 25%;"></div></div>
+                <span class="skill-percent">25%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="productions" class="section prod-section" aria-labelledby="productions-title">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title" id="productions-title">Productions</h2>
+      </div>
+
+      <div class="carousel-wrap">
+        <button class="carousel-arrow carousel-arrow--prev" id="carouselPrev" type="button" aria-label="Projet précédent">←</button>
+
+        <div class="carousel-viewport" id="carouselViewport">
+          <div class="carousel-track" id="carouselTrack">
+
+            <a href="productions-video.html" class="cat-card" data-idx="0">
+              <div class="cat-card-cover">
+                <div class="cat-card-img-placeholder">
+                  <img
+                    src="me.webp"
+                    alt="Aperçu des productions vidéo"
+                    width="900"
+                    height="1200"
+                    loading="lazy"
+                    decoding="async">
+                </div>
+                <div class="cat-card-overlay">
+                  <span class="cat-card-tag">04 projets</span>
+                </div>
+              </div>
+              <div class="cat-card-body">
+                <h3>Productions Vidéo</h3>
+                <p>Courts-métrages, documentaires, clips…</p>
+                <span class="cat-card-cta">Explorer</span>
+              </div>
+            </a>
+
+            <a href="productions-graphiques.html" class="cat-card" data-idx="1">
+              <div class="cat-card-cover">
+                <div class="cat-card-img-placeholder">
+                  <img
+                    src="CGW_affiche.webp"
+                    alt="Aperçu des productions graphiques"
+                    width="1200"
+                    height="1600"
+                    loading="lazy"
+                    decoding="async">
+                </div>
+                <div class="cat-card-overlay">
+                  <span class="cat-card-tag">06 projets</span>
+                </div>
+              </div>
+              <div class="cat-card-body">
+                <h3>Productions Graphiques</h3>
+                <p>Affiches, identités visuelles, illustrations…</p>
+                <span class="cat-card-cta">Explorer</span>
+              </div>
+            </a>
+
+            <a href="productions-ecrits.html" class="cat-card" data-idx="2">
+              <div class="cat-card-cover">
+                <div class="cat-card-img-placeholder">
+                  <span class="placeholder-inner">Image à venir</span>
+                </div>
+                <div class="cat-card-overlay">
+                  <span class="cat-card-tag">03 projets</span>
+                </div>
+              </div>
+              <div class="cat-card-body">
+                <h3>Productions Écrites</h3>
+                <p>Scénarios, critiques, articles…</p>
+                <span class="cat-card-cta">Explorer</span>
+              </div>
+            </a>
+
+            <a href="productions-divers.html" class="cat-card" data-idx="3">
+              <div class="cat-card-cover">
+                <div class="cat-card-img-placeholder">
+                  <span class="placeholder-inner">Image à venir</span>
+                </div>
+                <div class="cat-card-overlay">
+                  <span class="cat-card-tag">05 projets</span>
+                </div>
+              </div>
+              <div class="cat-card-body">
+                <h3>Divers</h3>
+                <p>Web, photo, expérimentations…</p>
+                <span class="cat-card-cta">Explorer</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <button class="carousel-arrow carousel-arrow--next" id="carouselNext" type="button" aria-label="Projet suivant">→</button>
+      </div>
+
+      <div class="carousel-dots" id="carouselDots">
+        <button class="dot active" type="button" data-dot="0" aria-label="Aller à Productions Vidéo"></button>
+        <button class="dot" type="button" data-dot="1" aria-label="Aller à Productions Graphiques"></button>
+        <button class="dot" type="button" data-dot="2" aria-label="Aller à Productions Écrites"></button>
+        <button class="dot" type="button" data-dot="3" aria-label="Aller à Divers"></button>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--alt" aria-labelledby="contact-title">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title" id="contact-title">Contact</h2>
+      </div>
+
+      <div class="contact-wrap">
+        <p class="contact-intro">Une collaboration, un projet, une question ?<br>Écris-moi.</p>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" autocomplete="email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Sujet du message">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message…"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+
+        <div class="contact-links">
+          <a href="mailto:ludovic.valden@gmail.com" class="contact-link">ludovic.valden@gmail.com</a>
+          <a href="https://github.com/l-vp" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/ludovic-valden-petrignani-aa5b203b7/" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Ludovic VALDEN--PETRIGNANI · MMI</span>
+
+      <div class="footer-links">
+        <a href="https://github.com/l-vp" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <button
+          type="button"
+          id="mentions-toggle"
+          class="footer-link-button"
+          aria-controls="mentions-panel"
+          aria-expanded="false">
+          Mentions légales
+        </button>
+      </div>
+    </div>
+
+    <div class="mentions-legales" id="mentions-panel" hidden>
+      <p>
+        Ce site est un portfolio personnel. Tous les contenus (textes, images, vidéos) sont la propriété de
+        <strong>Ludovic VALDEN--PETRIGNANI</strong> sauf mention contraire.
+        Pour toute demande : <a href="mailto:ludovic.valden@gmail.com">ludovic.valden@gmail.com</a>.
+        Hébergé sur <a href="https://github.com/l-vp" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script src="home.js" defer></script>
+</body>
+</html>

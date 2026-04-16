@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productions Graphiques — Portfolio MMI</title>
+  <meta name="description" content="Découvrez les productions graphiques de Ludovic Valden-Petrignani : affiches, identités visuelles, illustrations et créations variées.s.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+  <header id="header">
+    <nav class="nav-inner" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo">PORTFOLIO</a>
+
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-controls="nav-links"
+        aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        ><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+        ><a href="index.html#apropos" class="nav-link">À propos</a></li>
+        ><a href="index.html#competences" class="nav-link">Compétences</a></li>
+        ><a href="index.html#productions" class="nav-link">Productions</a></li>
+        ><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="subpage-section" aria-labelledby="graphiques-title">
+      <div class="subpage-header">
+        <a href="index.html#productions" class="back-link">← Retour aux productions</a>
+
+        <div class="subpage-hero-row">
+          <h1 class="subpage-title" id="graphiques-title">Productions Graphiques</h1>
+          <p class="subpage-desc">Affiches, identités visuelles, illustrations…</p>
+        </div>
+
+        <div class="subpage-cover-placeholder" aria-hidden="true">
+          <span>Image de couverture</span>
+        </div>
+      </div>
+
+      <div class="subpage-grid">
+        <article class="subpage-card reveal">
+          <div class="subpage-thumb subpage-thumb--tall">
+            <img
+              src="CGW_affiche.webp"
+              alt="Affiche Corsica Games Week"
+              width="1200"
+              height="1600"
+              loading="lazy"
+              decoding="async">
+          </div>
+          <div class="subpage-info">
+            <span class="prod-tag">Évènement</span>
+            <h2>Corsica Games Week</h2>
+            <p>Moodboard, affiche, logos et autres goodies pour une convention de jeux vidéo.</p>
+            <a href="projet-corsica-games-week.html" class="prod-link">Voir le projet</a>
+          </div>
+        </article>
+
+        <article class="subpage-card reveal">
+          <div class="subpage-thumb">
+            <img
+              src="Nosferatu2.webp"
+              alt="Affiche inspirée de Nosferatu"
+              width="1200"
+              height="1600"
+              loading="lazy"
+              decoding="async">
+          </div>
+          <div class="subpage-info">
+            <span class="prod-tag">Affiche</span>
+            <h2>Affiches Nosferatu</h2>
+            <p>Créations d'affiches autour du film Nosferatu de 1922.</p>
+            <a href="#" class="prod-link">Voir le projet</a>
+          </div>
+        </article>
+
+        <article class="subpage-card reveal">
+          <div class="subpage-thumb">
+            <img
+              src="Parfum.webp"
+              alt="Affiche de faux parfum avec identité visuelle"
+              width="1200"
+              height="1600"
+              loading="lazy"
+              decoding="async">
+          </div>
+          <div class="subpage-info">
+            <span class="prod-tag">Identité visuelle</span>
+            <h2>Affiche de faux parfum</h2>
+            <p>Branding d'une fausse bouteille de parfum avec une identité visuelle propre.</p>
+            <a href="#" class="prod-link">Voir le projet</a>
+          </div>
+        </article>
+
+        <article class="subpage-card reveal">
+          <div class="subpage-thumb subpage-thumb--tall">
+            <div class="placeholder-inner">Image à venir</div>
+          </div>
+          <div class="subpage-info">
+            <span class="prod-tag">Autres</span>
+            <h2>Créations variées</h2>
+            <p>Autres travaux graphiques et expérimentations visuelles.</p>
+            <a href="#" class="prod-link">Voir le projet</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Ludovic VALDEN--PETRIGNANI · MMI</span>
+
+      <div class="footer-links">
+        <a href="https://github.com/l-vp" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <button
+          type="button"
+          id="mentions-toggle"
+          class="footer-link-button"
+          aria-controls="mentions-panel"
+          aria-expanded="false">
+          Mentions légales
+        </button>
+      </div>
+    </div>
+
+    <div class="mentions-legales" id="mentions-panel" hidden>
+      <p>
+        Ce site est un portfolio personnel. Tous les contenus (textes, images, vidéos) sont la propriété de
+        <strong>Ludovic VALDEN--PETRIGNANI</strong> sauf mention contraire.
+        Pour toute demande : <a href="mailto:ludovic.valden@gmail.com">ludovic.valden@gmail.com</a>.
+        Hébergé sur <a href="https://github.com/l-vp" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
