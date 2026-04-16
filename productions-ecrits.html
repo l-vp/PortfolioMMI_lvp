@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productions Écrites — Portfolio MMI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="header">
+    <nav class="nav-inner" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo">PORTFOLIO</a>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="index.html#apropos" class="nav-link">À propos</a></li>
+        <li><a href="index.html#competences" class="nav-link">Compétences</a></li>
+        <li><a href="index.html#productions" class="nav-link">Productions</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="subpage-section" aria-labelledby="ecrits-title">
+      <div class="subpage-header">
+        <a href="index.html#productions" class="back-link">← Retour aux productions</a>
+        <div class="subpage-hero-row">
+          <h1 class="subpage-title" id="ecrits-title">Productions Écrites</h1>
+          <p class="subpage-desc">Scénarios, critiques de films, articles de fond…</p>
+        </div>
+        <div class="subpage-cover-placeholder" aria-hidden="true">
+          <span>Image de couverture</span>
+        </div>
+      </div>
+
+      <div class="subpage-list">
+        <div class="subpage-list-item reveal">
+          <div class="subpage-list-left">
+            <span class="prod-tag">Scénario</span>
+            <h2>Sleepwalker</h2>
+            <p>Scénario et storyboard d'un court-métrage.</p>
+          </div>
+          <a href="projet-scénarioSleepwalker.html" class="prod-link">Lire →</a>
+        </div>
+
+        <div class="subpage-list-item reveal">
+          <div class="subpage-list-left">
+            <span class="prod-tag">Scénario</span>
+            <h2>O Bero</h2>
+            <p>Scénario et storyboard d'un court-métrage.</p>
+          </div>
+          <a href="projet-scénarioSleepwalker.html" class="prod-link">Lire →</a>
+        </div>
+
+        <div class="subpage-list-item reveal">
+          <div class="subpage-list-left">
+            <span class="prod-tag">Critique</span>
+            <h2>Nosferatu</h2>
+            <p>Analyse du film et de sa mise en scène.</p>
+          </div>
+          <a href="projet-critique-nosferatu.html" class="prod-link">Lire →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Ludovic VALDEN--PETRIGNANI &nbsp;·&nbsp; MMI</span>
+      <div class="footer-links">
+        <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <button type="button" id="mentions-toggle" class="footer-link-button" aria-controls="mentions-panel" aria-expanded="false">
+          Mentions légales
+        </button>
+      </div>
+    </div>
+    <div class="mentions-legales" id="mentions-panel" hidden>
+      <p>Ce site est un portfolio personnel réalisé dans le cadre du BUT MMI. Tous les contenus sont la propriété de <strong>Ludovic VALDEN--PETRIGNANI</strong> sauf mention contraire.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
