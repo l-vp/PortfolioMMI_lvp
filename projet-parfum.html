@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Affiche de faux parfum — Portfolio MMI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+  <header id="header">
+    <nav class="nav-inner" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo">PORTFOLIO</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-controls="nav-links" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#accueil"     class="nav-link">Accueil</a></li>
+        <li><a href="index.html#apropos"     class="nav-link">À propos</a></li>
+        <li><a href="index.html#competences" class="nav-link">Compétences</a></li>
+        <li><a href="index.html#productions" class="nav-link">Productions</a></li>
+        <li><a href="index.html#contact"     class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="project-page">
+
+      <header class="project-hero">
+        <a href="productions-graphiques.html" class="project-back">← Productions Graphiques</a>
+        <p class="project-kicker">Identité visuelle · Branding</p>
+        <h1 class="project-title">Affiche de faux parfum</h1>
+        <div class="project-meta">
+          <span>Outils :</span> Photoshop &nbsp;|&nbsp;
+          <span>Année :</span> 2025
+        </div>
+        <p class="project-intro">
+          Création d'une identité visuelle complète autour d'une bouteille de parfum fictive :
+          naming, palette, typographie et affiche publicitaire finale. Le but étant de s'approprier les codes
+          du luxe pour construire une marque crédible de A à Z.
+        </p>
+      </header>
+
+      <!-- AFFICHE + DÉMARCHE -->
+      <section class="project-section" aria-labelledby="parfum-affiche">
+        <h2 id="parfum-affiche">Affiche finale</h2>
+        <div class="project-block">
+          <div class="project-block__img">
+            <figure>
+              <img
+                src="Parfum.webp"
+                alt="Affiche publicitaire du faux parfum"
+                width="1200" height="1600"
+                loading="eager" decoding="async">
+              <figcaption>Affiche publicitaire — rendu final</figcaption>
+            </figure>
+          </div>
+          <div class="project-block__text">
+            <h3>Direction artistique</h3>
+            <p>Le travail a commencé par une phase de recherche sur les codes visuels de la parfumerie haut de gamme : style défini et unique, typographies marquées, photographies épurées, jeu sur la lumière et les matières.</p>
+            <h3>Identité de marque</h3>
+            <p>À partir de cette recherche, une direction artistique propre a été définie : nom de la marque, palette de couleurs restreinte, choix typographiques... Avant d'aboutir à la composition finale de l'affiche publicitaire. Cette dernière s'inspire de 2 principaux éléments : le chrome et l'espace. Que ce soit avec leurs couleurs froides, leurs styles à la fois pures et flashy, ou leurs brillances, ces 2 esthétiques se marient à merveille pour créer, je trouve, un ensemble pertinent et cohérent.</p>
+            <h3>Résultat</h3>
+            <p>L'objectif était de produire un visuel convaincant qui aurait pu exister dans la vraie vie, tout en restant cohérent avec les standards visuels du secteur, ainsi qu'en apportant une identité propre au concept.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="project-divider">
+
+      <nav class="project-section" aria-label="Navigation entre projets">
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="projet-nosferatu.html"       class="back-link">← Nosferatu</a>
+          <a href="projets-divers.html" class="prod-link">Productions divers →</a>
+        </div>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Ludovic VALDEN-PETRIGNANI · MMI</span>
+      <div class="footer-links">
+        <a href="https://github.com/l-vp" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+        <button type="button" id="mentions-toggle" class="footer-link-button" aria-controls="mentions-panel" aria-expanded="false">Mentions légales</button>
+      </div>
+    </div>
+    <div class="mentions-legales" id="mentions-panel" hidden>
+      <p>Ce site est un portfolio personnel. Tous les contenus sont la propriété de <strong>Ludovic VALDEN-PETRIGNANI</strong> sauf mention contraire. Pour toute demande : <a href="mailto:ludovic.valden@gmail.com">ludovic.valden@gmail.com</a>. Hébergé sur <a href="https://github.com/l-vp" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

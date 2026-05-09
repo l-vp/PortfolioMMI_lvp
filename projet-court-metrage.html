@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Court-métrage — Portfolio MMI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Embed vidéo ── */
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ── Bloc synopsis : texte pleine largeur ── */
+    .project-text-full {
+      color: var(--muted);
+      line-height: 1.85;
+      display: grid;
+      gap: 1.1rem;
+      max-width: 80ch;
+    }
+
+    /* ── Grid screenshots 3 colonnes ── */
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    .screenshot-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: zoom-in;
+    }
+    .screenshot-card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      transition: transform 400ms ease;
+    }
+    .screenshot-card:hover img { transform: scale(1.03); }
+    .screenshot-card figcaption {
+      padding: 0.6rem 0.9rem 0.75rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    /* ── Fiche technique ── */
+    .film-specs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-top: 1.25rem;
+    }
+    .film-spec {
+      background: var(--surface);
+      padding: 1rem 1.25rem;
+      display: grid;
+      gap: 0.3rem;
+    }
+    .film-spec__label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+    }
+    .film-spec__value {
+      font-size: 1rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    @media (max-width: 760px) {
+      .screenshot-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+  <header id="header">
+    <nav class="nav-inner" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo">PORTFOLIO</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-controls="nav-links" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#accueil"     class="nav-link">Accueil</a></li>
+        <li><a href="index.html#apropos"     class="nav-link">À propos</a></li>
+        <li><a href="index.html#competences" class="nav-link">Compétences</a></li>
+        <li><a href="index.html#productions" class="nav-link">Productions</a></li>
+        <li><a href="index.html#contact"     class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="project-page">
+
+      <!-- EN-TÊTE -->
+      <header class="project-hero">
+        <a href="productions-video.html" class="project-back">← Productions Vidéo</a>
+        <p class="project-kicker">Court-métrage · Fiction</p>
+        <h1 class="project-title">Tuto cuisine</h1>
+        <div class="project-meta">
+          <span>Mon rôle :</span> Réalisateur · Acteur &nbsp;|&nbsp;
+          <span>Durée :</span> XX min &nbsp;|&nbsp;
+          <span>Année :</span> 2025
+        </div>
+        <p class="project-intro">
+          Projet vidéo du premier semestre de ma première année de MMI, cette vidéo / court-métrage avait pour but de filmer un tutoriel ou une interview au choix. Nous avons finalement décidé de partir sur un tutoriel de cuisine, et pour ce travail nous étions deux : un camarade qui s'occupait de la caméra et du son, et moi même. 
+          Constituant notre première expérience de tournage, nous avons voulu le développer un peu et tenter des choses en terme de mise en scène et de montage.
+        </p>
+      </header>
+
+      <!-- VIDÉO YOUTUBE -->
+      <section class="project-section" aria-labelledby="cm-video">
+        <h2 id="cm-video">Regarder la vidéo</h2>
+        <div class="video-wrap">
+          <!-- Remplace VIDEO_ID par l'identifiant YouTube (ex: dQw4w9WgXcQ) -->
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Titre du film — court-métrage"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </section>
+
+      <hr class="project-divider">
+
+      <!-- FICHE TECHNIQUE -->
+      <section class="project-section" aria-labelledby="cm-specs">
+        <h2 id="cm-specs">Fiche technique</h2>
+        <div class="film-specs">
+          <div class="film-spec">
+            <span class="film-spec__label">Genre</span>
+            <span class="film-spec__value">Slice of life · Tutoriel</span>
+          </div>
+          <div class="film-spec">
+            <span class="film-spec__label">Durée</span>
+            <span class="film-spec__value">XX minutes</span>
+          </div>
+          <div class="film-spec">
+            <span class="film-spec__label">Année</span>
+            <span class="film-spec__value">2025</span>
+          </div>
+          <div class="film-spec">
+            <span class="film-spec__label">Montage</span>
+            <span class="film-spec__value">Premiere Pro</span>
+          </div>
+          <div class="film-spec">
+            <span class="film-spec__label">Tournage</span>
+            <span class="film-spec__value">Corte, Corse</span>
+          </div>
+        </div>
+      </section>
+
+      <hr class="project-divider">
+
+      <!-- SYNOPSIS -->
+      <section class="project-section" aria-labelledby="cm-synopsis">
+        <h2 id="cm-synopsis">Synopsis</h2>
+        <div class="project-text-full">
+          <p>
+            Paul, un étudiant sans histoire débute sa journée dans son appartement vide. Les rayons du soleil levant sur la terasse et l'air frais du début de l'hiver, l'aident à se réveiller. Il se décide alors à se préparer un bon petit déjeuner.
+          </p>
+        </div>
+      </section>
+
+      <hr class="project-divider">
+
+      <!-- NOTE D'INTENTION -->
+      <section class="project-section" aria-labelledby="cm-intention">
+        <h2 id="cm-intention">Note d'intention</h2>
+        <div class="project-block">
+          <div class="project-block__text" style="gap:1.1rem;">
+            <p>Ce court-métrage / vidéo constituait donc notre projet du premier semestre. Le choix du tuto cuisine à simplement été fait car il nous permettait de mieux représenter le sujet que je voulais aborder (en dehors de la recette de cuisine) : la solitude. Paul est seul, son téléphone n'a aucune notifications à son réveil, personne ne l'appel, et personne ne l'accompagne pour manger.</p>
+              <p>Il était prévu à la base d'avoir 2 versions de Paul : une marquée négativement par cette solitude, l'autre positivement. Cette différence était censée être montrée au moment où ce dernier tire sur sa cigarette : un changement dans son attitude et ses expressions s'opère. Il sourit, respire un grand coup et rentre préparer à manger.</p>
+              <p>Cependant, en voyant le résultat final, je ne suis pas forcément "satisfait du rendu, et je ne trouve pas que le message soit réellement perceptible et proprement interprété. En revanche, ce travail à constitué une première expérience de tournage, et j'en garde une très belle expérience enrichissante, en plus d'avoir pris beaucoup de plaisir à le réaliser et le monter. </p>
+              <p>Cette première approche de la réalisation, en plus de me donner un premier apercu des types de défis et contretemps que l'on peut rencontrer lors d'un tournage, m'a également permis de commencer à me familiariser avec la réalisation et la vidéo.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="project-divider">
+
+      <!-- SCREENSHOTS / EXTRAITS VISUELS -->
+      <section class="project-section" aria-labelledby="cm-screens">
+        <h2 id="cm-screens">Extraits visuels</h2>
+        <p style="color:var(--muted);margin-bottom:0;">Quelques captures représentatives du film.</p>
+        <div class="screenshot-grid">
+
+          <figure class="screenshot-card">
+            <!-- Remplace src par tes captures -->
+            <img src="" alt="Extrait du film — scène 1" width="1920" height="1080" loading="lazy" decoding="async">
+          </figure>
+
+          <figure class="screenshot-card">
+            <img src="" alt="Extrait du film — scène 2" width="1920" height="1080" loading="lazy" decoding="async">
+          </figure>
+
+          <figure class="screenshot-card">
+            <img src="" alt="Extrait du film — scène 3" width="1920" height="1080" loading="lazy" decoding="async">
+          </figure>
+
+        </div>
+      </section>
+
+      <hr class="project-divider">
+
+      <nav class="project-section" aria-label="Navigation entre projets">
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="productions-video.html" class="back-link">← Retour aux productions vidéo</a>
+        </div>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Ludovic VALDEN-PETRIGNANI · MMI</span>
+      <div class="footer-links">
+        <a href="https://github.com/l-vp" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+        <button type="button" id="mentions-toggle" class="footer-link-button" aria-controls="mentions-panel" aria-expanded="false">Mentions légales</button>
+      </div>
+    </div>
+    <div class="mentions-legales" id="mentions-panel" hidden>
+      <p>Ce site est un portfolio personnel. Tous les contenus sont la propriété de <strong>Ludovic VALDEN-PETRIGNANI</strong> sauf mention contraire. Pour toute demande : <a href="mailto:ludovic.valden@gmail.com">ludovic.valden@gmail.com</a>. Hébergé sur <a href="https://github.com/l-vp" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

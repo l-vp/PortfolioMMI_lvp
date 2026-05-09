@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Affiches Nosferatu — Portfolio MMI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+  <header id="header">
+    <nav class="nav-inner" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo">PORTFOLIO</a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-controls="nav-links" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#accueil"     class="nav-link">Accueil</a></li>
+        <li><a href="index.html#apropos"     class="nav-link">À propos</a></li>
+        <li><a href="index.html#competences" class="nav-link">Compétences</a></li>
+        <li><a href="index.html#productions" class="nav-link">Productions</a></li>
+        <li><a href="index.html#contact"     class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="project-page">
+
+      <header class="project-hero">
+        <a href="productions-graphiques.html" class="project-back">← Productions Graphiques</a>
+        <p class="project-kicker">Affiche · Exercice graphique</p>
+        <h1 class="project-title">Affiches Nosferatu</h1>
+        <div class="project-meta">
+          <span>Outils :</span> Photoshop · Illustrator &nbsp;|&nbsp;
+          <span>Année :</span> 2026 &nbsp;|&nbsp;
+          <span>Référence :</span> F.W. Murnau, 1922
+        </div>
+        <p class="project-intro">
+          Deux concepts d'affiches re-designées autour de <em>Nosferatu le vampire</em> de F.W. Murnau (1922).
+          Deux directions visuelles distinctes explorées pour un même film.
+        </p>
+      </header>
+
+      <!-- CONCEPT 1 — première exploration, image à droite -->
+      <section class="project-section" aria-labelledby="nosferatu-c1">
+        <h2 id="nosferatu-c1">Concept 1 <span style="color:var(--muted);font-size:0.65em;font-weight:400;margin-left:0.5rem;">— première exploration</span></h2>
+        <div class="project-block project-block--reverse">
+          <div class="project-block__img">
+            <figure>
+              <img src="nosferatu1.webp" alt="Affiche Nosferatu concept 1, première exploration" width="1200" height="1600" loading="lazy" decoding="async">
+              <figcaption>Concept 1 — première exploration</figcaption>
+            </figure>
+          </div>
+          <div class="project-block__text">
+            <h3>La première piste</h3>
+            <p>Ce premier concept s'appuyait davantage sur une représentation simple et minimaliste — traitement plus illustratif, typographie ancienne, couleurs plus saturées.</p>
+            <p>Cette première version a servi de base de réflexion pour identifier ce qui manquait et affiner la direction vers le concept final. En effet, n'étant pas un grand fan du minimalisme, j'ai finalement laissé l'idée de côté pour tenter quelque chose de plus "intéressant" (en terme de design) selon moi.</p>
+            <p>De plus, avec le recul, cette affiche modernise trop l'oeuvre et ne rappelle pas vraiment le Nosferatu de l'époque.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="project-divider">
+
+      <!-- CONCEPT 2 — version finale, image à gauche -->
+      <section class="project-section" aria-labelledby="nosferatu-c2">
+        <h2 id="nosferatu-c2">Concept 2 <span style="color:var(--accent);font-size:0.65em;font-weight:400;margin-left:0.5rem;">— version finale</span></h2>
+        <div class="project-block">
+          <div class="project-block__img">
+            <figure>
+              <img src="Nosferatu2.webp" alt="Affiche Nosferatu concept 2, version finale" width="1200" height="1600" loading="eager" decoding="async">
+              <figcaption>Concept 2 — version retenue</figcaption>
+            </figure>
+          </div>
+          <div class="project-block__text">
+            <h3>Design retenu</h3>
+            <p>Pour cette 2ème version, j’ai choisi une palette de couleurs chaudes, inspirée des teintes sépia, afin de rappeler les rendus visuels et l’esthétique du cinéma de l’époque. J’ai également sélectionné une scène représentant Ellen sur la plage, un moment clé du film qui traduit la peur grandissante du personnage et son pressentiment face au danger. Ce choix visuel permet de mettre en avant la tension psychologique du récit, directement liée à l'arrivée du comte Orlock. Au-dessus de la scène, l’ombre imposante du vampire surplombe les personnages, symbolisant une menace omniprésente et invisible, prête à surgir de l’obscurité.</p>
+            <p>C'est cette version que j'ai retenue comme affiche finale de mon projet pour ce second semestre de MMI, pour son impact visuel et sa cohérence avec l'univers du film. Comparée à la première version, je la trouve plus intéressante dans sa composition et ce qu'elle représente, tout en étant plus en raccord avec l'oeuvre originale. </p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="project-divider">
+
+      <nav class="project-section" aria-label="Navigation entre projets">
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="projet-cgw.html"    class="back-link">← CGW</a>
+          <a href="projet-parfum.html" class="prod-link">Parfum →</a>
+        </div>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Ludovic VALDEN-PETRIGNANI · MMI</span>
+      <div class="footer-links">
+        <a href="https://github.com/l-vp" target="_blank" rel="noopener noreferrer" class="contact-link">GitHub</a>
+        <button type="button" id="mentions-toggle" class="footer-link-button" aria-controls="mentions-panel" aria-expanded="false">Mentions légales</button>
+      </div>
+    </div>
+    <div class="mentions-legales" id="mentions-panel" hidden>
+      <p>Ce site est un portfolio personnel. Tous les contenus sont la propriété de <strong>Ludovic VALDEN-PETRIGNANI</strong> sauf mention contraire. Pour toute demande : <a href="mailto:ludovic.valden@gmail.com">ludovic.valden@gmail.com</a>. Hébergé sur <a href="https://github.com/l-vp" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
